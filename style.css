@@ -33,7 +33,14 @@ body {
 
 .main-container {
   text-align: center;
-  margin-top: 2vw
+  display: flex;
+  justify-content: center;
+  margin-top: 2vw;
+}
+
+.contact-wrapper {
+  position: relative;
+  display: inline-block;
 }
 
 .contact-link {
@@ -41,8 +48,28 @@ body {
   background-color: #EA526F;
   text-decoration: none;
   font-family: 'Montserrat', sans-serif;
-  padding: 5px 10px;
-  margin-top: 20px;
+  padding: 5px 0;
+}
+
+.contact-link::before {
+  content: "";
+  width: 0;
+  height: 0;
+  border-bottom: 29px solid #EA526F;
+  border-left: 29px solid transparent;
+  position: relative;
+  bottom: 24px;
+  left: -29px;
+}
+.contact-link::after {
+  content: "";
+  width: 0;
+  height: 0;
+  border-top: 29px solid #EA526F;
+  border-right: 29px solid transparent;
+  position: relative;
+  bottom: -24px;
+  right: -29px;
 }
 
 @media screen and (max-width: 1200px) and (min-width: 900px) {
